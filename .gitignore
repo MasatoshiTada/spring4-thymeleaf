@@ -1,0 +1,5 @@
+/.idea
+/target
+/build-war.sh
+/shutdown.sh
+/*.iml

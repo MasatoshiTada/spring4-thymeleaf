@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>入力画面</title>
+    <link rel="stylesheet" href="../../../css/style.css" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<form action="./result.html" th:action="@{result}" method="get" th:object="${helloForm}">
+    <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="error">検証エラーメッセージ</span>
+    名前：<input type="text" name="name" th:field="*{name}">
+    <input type="submit" value="送信">
+</form>
+</body>
+</html>
