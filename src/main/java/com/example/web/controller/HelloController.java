@@ -6,9 +6,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping(value = "/hello")
@@ -19,12 +19,12 @@ public class HelloController {
         return new HelloForm();
     }
 
-    @RequestMapping(value = "/index", method = RequestMethod.GET)
+    @GetMapping("/index")
     public String index() {
         return "hello/index";
     }
 
-    @RequestMapping(value = "/result", method = RequestMethod.GET)
+    @GetMapping("/result")
     public String result(@Validated HelloForm helloForm,
                          BindingResult bindingResult, Model model) {
         if (bindingResult.hasErrors()) {
