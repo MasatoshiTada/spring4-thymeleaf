@@ -2,7 +2,7 @@
 Spring Bootを使わないSpring Framework 4で、ビューとしてThymeleafを使う最小構成のサンプルです。
 
 # バージョン
-- Spring Framework 4.2.5.RELEASE
+- Spring Framework 4.3.0.RELEASE
 - Thymeleaf 3.0.0.RELEASE
 
 # ビルド
